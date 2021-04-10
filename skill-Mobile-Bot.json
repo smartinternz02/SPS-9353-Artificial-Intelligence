@@ -1,0 +1,674 @@
+{
+  "intents": [
+    {
+      "intent": "android",
+      "examples": [
+        {
+          "text": "android"
+        },
+        {
+          "text": "Oneplus"
+        },
+        {
+          "text": "pixel"
+        },
+        {
+          "text": "samsung"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greeting",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "iPhone",
+      "examples": [
+        {
+          "text": "apple devices"
+        },
+        {
+          "text": "ios"
+        },
+        {
+          "text": "iphone"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "mobile",
+      "examples": [
+        {
+          "text": "do you have any offers"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Oneplus",
+      "examples": [
+        {
+          "text": "oneplus"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "buy"
+        },
+        {
+          "text": "delivery"
+        },
+        {
+          "text": "get"
+        },
+        {
+          "text": "own"
+        },
+        {
+          "text": "shop"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "pixel",
+      "examples": [
+        {
+          "text": "google"
+        },
+        {
+          "text": "google phn"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Samsung",
+      "examples": [
+        {
+          "text": "samsung"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "android",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "android",
+          "synonyms": [
+            "android",
+            "Oneplus",
+            "pixel",
+            "samsung"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "buy",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "buy",
+          "synonyms": [
+            "buy",
+            "get",
+            "order",
+            "own"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}\\b"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "ga",
+            "gud evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "ge",
+            "gud aftn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "gm",
+            "gud mrng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": [
+            "Hello",
+            "hi"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "iPhone",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "iphone",
+          "synonyms": [
+            "apple devices",
+            "ios devices",
+            "iphones"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "moblie",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "mobile",
+          "synonyms": [
+            "mobile"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "moblies",
+          "synonyms": [
+            "devices",
+            "phns",
+            "phones"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "oneplus",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "oneplus",
+          "synonyms": [
+            "oneplus"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "orders",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "pixel",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "pixel",
+          "synonyms": [
+            "google phone",
+            "pixel"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "samsung",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "samsung",
+          "synonyms": [
+            "note",
+            "samsung"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1617997043445",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "source": "https://soyacincau.com/wp-content/uploads/2020/10/201014-iphone-12-he-2-768x432.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Latest Mobiles in Apple Brand:\niPhone 12 mini\nprice:81999rs\niPhone 12 \nprice:94999rs\niPhone 12 pro\nprice:119000rs\niPhone 12 pro max\nprice:130000rs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1617992588306",
+      "conditions": "#iPhone || @iPhone",
+      "dialog_node": "node_10_1617992658951"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for giving your email ID. your mail id $email is used for further reference."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_1_1617952731242"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "These are the available brands in the store\nOnePlus\nSamsung\nPixel"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#android || @android",
+      "dialog_node": "node_2_1617993754203",
+      "previous_sibling": "node_9_1617992588306"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Latest mobiles in Google Brand\nGoogle Pixel 4A\nprice:26999rs\nGoogle Pixel 5\nprice:34999rs\nGoogle Pixel 5 XL\nprice:48999rs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://i.gadgets360cdn.com/large/Pixel_5_vs_4_vs_5G_1601535954780.jpg?downsize=950:*&output-quality=80&output-format=webp",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1617993754203",
+      "conditions": "#pixel || @pixel",
+      "dialog_node": "node_3_1617994640471",
+      "previous_sibling": "node_8_1617994381710"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can own the desired product in any of the E-commerce  Websites(Flipkart,Amazon) and also in offline stores"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.openbusinesscouncil.org/wp-content/uploads/2020/07/e-commerce-definizione-cos-e.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#order || @buy",
+      "dialog_node": "node_6_1617997043445",
+      "previous_sibling": "node_2_1617993754203"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Latest Mobiles in Samsung Brand\nSamsung s21 Ultra  \nprice-105000rs\nSamsung s21+\nprice-92000rs\nSamsung s21\nprice-69999rs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://images.indianexpress.com/2021/01/Galaxy-S21.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1617993754203",
+      "conditions": "#Samsung || @samsung",
+      "dialog_node": "node_7_1617994742253"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greeting || @greetings",
+      "dialog_node": "node_8_1617946927082",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Latest Mobiles in OnePlus Brand\nOnePlus 9 Pro\nprice:64000rs\nOnePlus 9\nprice:54999rs\nOnePlus 9R\nprice:45999rs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.gizmochina.com/wp-content/uploads/2021/03/OnePlus-9-Pro-All-Colors-Featured.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1617993754203",
+      "conditions": "#Oneplus || @oneplus",
+      "dialog_node": "node_8_1617994381710",
+      "previous_sibling": "node_7_1617994742253"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do You prefer Android or Apple Devices"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#mobile || @moblie",
+      "dialog_node": "node_9_1617992588306",
+      "previous_sibling": "node_8_1617946927082"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening!! How can I help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1617946927082",
+      "conditions": "@greetings",
+      "dialog_node": "response_1_1617947523404",
+      "previous_sibling": "response_5_1617947383181"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon!! How can I help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1617946927082",
+      "conditions": "#Greeting",
+      "dialog_node": "response_3_1617947548544",
+      "previous_sibling": "response_1_1617947523404"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello,How can i help you"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1617946927082",
+      "conditions": "#Greeting",
+      "dialog_node": "response_4_1617997273231",
+      "previous_sibling": "response_8_1617991309689"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning!! How can I help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1617946927082",
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "response_5_1617947383181"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello how can i help you"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1617946927082",
+      "conditions": "#Greeting",
+      "dialog_node": "response_8_1617991309689",
+      "previous_sibling": "response_3_1617947548544"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, I am a Mobile bot, How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Mobile Bot",
+  "language": "en",
+  "description": ""
+}
