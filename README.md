@@ -9,4 +9,4 @@ Mobile bot can suggest the user to opt a mobile , Firstly the mobiles are catego
 1)iPhones 2)Android 
 As per the user's intrest the recently launched devices are shown
 So The Bot will be guiding in user by letting him know the model name,price and the best way to own that particular product
-                                            THANK YOu
+                                            THANK YOU
